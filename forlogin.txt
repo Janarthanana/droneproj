@@ -1,0 +1,7 @@
+application.admin.views.default.layout.common.login
+application.admin.controllers.home
+application.admin.models.home_model
+
+application.controllers.home
+application.models.home_model
+application.views.default.layout.common.login
