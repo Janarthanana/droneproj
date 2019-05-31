@@ -1,29 +1,29 @@
 <?php
 
-  $data = array(
-    'facebook'    => $this->fb_connect->fb,
-    'fbSession'   => $this->fb_connect->fbSession,
-    'user'      => $this->fb_connect->user,
-    'uid'     => $this->fb_connect->user_id,
-    'fbLogoutURL' => $this->fb_connect->fbLogoutURL,
-    'fbLoginURL'  => $this->fb_connect->fbLoginURL, 
-    'base_url'    => site_url('home/facebook'),
-    'appkey'    => $this->fb_connect->appkey,
-  );
-  //var_dump($data);
+	$data = array(
+		'facebook'		=> $this->fb_connect->fb,
+		'fbSession'		=> $this->fb_connect->fbSession,
+		'user'			=> $this->fb_connect->user,
+		'uid'			=> $this->fb_connect->user_id,
+		'fbLogoutURL'	=> $this->fb_connect->fbLogoutURL,
+		'fbLoginURL'	=> $this->fb_connect->fbLoginURL,	
+		'base_url'		=> site_url('home/facebook'),
+		'appkey'		=> $this->fb_connect->appkey,
+	);
+	//var_dump($data);
 ?>
 
 <script type="text/javascript">
-      jQuery(function($) {
-      
-      jQuery("#terms").fancybox();
-  
-  
-    
-          
-      });
-    </script>
-    
+			jQuery(function($) {
+			
+			jQuery("#terms").fancybox();
+	
+	
+		
+					
+			});
+		</script>
+		
 <div class="body_cont">
 <div class="cont-inner-signup"> 
 <div id="two-columnar-section" class="login-main-content">
@@ -33,8 +33,8 @@
 <div class="home-signpost-content home-signpost-content-login">
 <h1 class="social-login-title"><b><span style="color:#ec6600;">Login</span> <span style="color:#ec6600;">to your</span> <span style="color:#ec6600;">account</span></b></h1>
 <div class="login-next">
-      
-     
+    	<!-- <a href="<?php echo base_url().getThemeName();?>/default/images/1n.png"> -->
+  <!-- <a href="<?php echo base_url(); ?>index.php/header_home">Controllerssss</a> -->
   <!--<p style="
     padding-left: 251px;
     padding-top: 32px;
@@ -47,62 +47,53 @@
  
  
 
-  <?php if($this->input->post('clogin')) {  if($error!='') { ?>
-        <div id="error">
-          <ul>
-          
-            <?php  echo $error; ?>
-          
-          </ul>
-        </div>
-      
-    <?php } } ?>
+	<?php if($this->input->post('clogin')) {  if($error!='') { ?>
+				<div id="error">
+					<ul>
+					
+						<?php  echo $error; ?>
+					
+					</ul>
+				</div>
+			
+		<?php } } ?>
 
-  <?php if($msg!='') { if($msg=='login') { ?><div class="error" align="center"><p>You must have to Login or Sign Up for creating Job.</p></div><?php } if($msg=='fail') { ?><div class="error" align="center"><p>Sorry,Internal System Error. Please Try Again.</p></div><?php } } ?>
+	<?php if($msg!='') { if($msg=='login') { ?><div class="error" align="center"><p>You must have to Login or Sign Up for creating Job.</p></div><?php } if($msg=='fail') { ?><div class="error" align="center"><p>Sorry,Internal System Error. Please Try Again.</p></div><?php } } ?>
 
 
 
 <script type="text/javascript">
 function show_form(id1,id2)
 {
-  
-  document.getElementById(id1).style.display = "block";
-  document.getElementById(id2).style.display = "none";
-  
+	
+	document.getElementById(id1).style.display = "block";
+	document.getElementById(id2).style.display = "none";
+	
 }
 </script>
 <div class="form-main-box login-form-main">
 
 
-    <?php
-            if($view == "cforget")
-            {
-                $attributes = array('name'=>'loginForm','id'=>'loginForm','style'=>'display:none;');
-            }else{
-                $attributes = array('name'=>'loginForm','id'=>'loginForm','class'=>'form_design');
-            }
-            echo form_open('login',$attributes);
-        ?>
-                                
+                     
   
-    
+<!--    <form method="post" action="<?php echo base_url(); ?>index.php/sign_up"> -->
         <fieldset style="border:none">
             <table width="100%" border="0" cellspacing="0" cellpadding="5" style="float:right;">
       <tr id="loginEmailTR">
         
-        <td width="82%" align="center"><input type="text" name="login_email" placeholder="Email" id="login_email" value="<?php echo $login_email; ?>" class="ntext form-control form-control-signup form-control-login icon-back4"/>
+        <td width="82%" align="center"><input type="text" name="login_email" placeholder="Email" id="login_email"  class="ntext form-control form-control-signup form-control-login icon-back4"/>
        <span style="float:right; " id="email_symbol"></span><br><span id="emailInfo"></span></td>
       </tr>
-    
+	  
       <tr id="loginPasswordTR">
-        <td align="center" ><input type="password" name="login_password" id="login_password" placeholder="Password" value="<?php echo $login_password; ?>"  class="ntext form-control form-control-signup form-control-login icon-back5" />
+        <td align="center" ><input type="password" name="login_password" id="login_password" placeholder="Password"   class="ntext form-control form-control-signup form-control-login icon-back5" />
         <span style="float:right; " id="password_symbol"></span><br><span id="passwordInfo"></span>
         </td>
       </tr>
       <tr>
-        <td>
-          <table cellpadding="0" cellspacing="0" width="100%">
-              <tr>
+      	<td>
+        	<table cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
                     <td>
                         <div id="mbs" class="agree-signup agree-login">
                             <input type="checkbox" name="remember" value="1" id="remember">
@@ -112,14 +103,16 @@ function show_form(id1,id2)
                     <td> 
                         <div class="signup-btns login-btns login-btns-new pull-right">
                             <input type="hidden" name="clogin" value="clogin" id="clogin" />
-                            <input type="submit" value="Login" class="btn btn-default btn-default-login" name="loginbtn" id="loginbtn" >
+                            <input type="submit" value="Login" class="btn btn-default btn-default-login" >
                         </div>
                     </td>
-            </tr>
-          </table>
+        		</tr>
+        	</table>
+
         </td>
       </tr>
-    <tr>
+       
+	  <tr>
          <td class="forgot-p">
          <div class="forgot-pa">
               <p class="forgot-title">Forgot your password ?</p>
@@ -129,16 +122,16 @@ function show_form(id1,id2)
       </tr>
       <tr>
          <td>
-          <div class="forgot-pa forgot-pa-no">
-              <p>Don't have an account yet ?  <a href="<?php echo base_url(); ?>sign_up">Create an account</a></p>
+         	<div class="forgot-pa forgot-pa-no">
+              <p>Don't have an account yet ?  <a href="<?php echo base_url(); ?>/index.php/sign_up">Create an account</a></p>
           </div>
           </td>
       </tr>
     </table>
         </fieldset>
   
-                  
-    </form>
+					 </form>				
+  
     
     
     <?php
@@ -153,15 +146,15 @@ function show_form(id1,id2)
                                     
                                     
     <?php if($this->input->post('cforget')) {  if($error!='') { ?>
-        <div id="error">
-          <ul>
-          
-            <?php  echo $error; ?>
-          
-          </ul>
-        </div>
-      
-    <?php } } ?>
+				<div id="error">
+					<ul>
+					
+						<?php  echo $error; ?>
+					
+					</ul>
+				</div>
+			
+		<?php } } ?>
         
         
         <fieldset style="border:none">
@@ -172,28 +165,28 @@ function show_form(id1,id2)
         <span style="float:right; " id="forgetEmailInfo"></span></td>
       </tr>
       <tr>
-        <td>
-          <table cellpadding="0" cellspacing="0" width="100%">
-              <tr>
+      	<td>
+        	<table cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
                     <td>
                         <div id="mbs" class="agree-signup agree-login">
                             <a onclick="show_form('loginForm','forgetForm')" href="javascript:">Back To Login </a>
                         </div>   
                     </td>
-                    <td> 
+                    <td>
                         <div class="signup-btns login-btns login-btns-new pull-right">
                             <input type="hidden" name="cforget" value="cforget" id="cforget" />
                             <input type="submit" value="Retrieve Password" name="forgetbtn" id="forgetbtn" class="btn btn-default btn-default-login">
                         </div>
                     </td>
-            </tr>
-          </table>
+        		</tr>
+        	</table>
         </td>
       </tr>
     </table>
         </fieldset>
-    
-                  
+  	
+									
     </form>
  
     
@@ -245,4 +238,5 @@ function show_form(id1,id2)
 </div>
 </div>
 
-  <script type="text/javascript" src="<?php echo base_url().getThemeName(); ?>/js/validation.js"></script>
+	<script type="text/javascript" src="<?php echo base_url().getThemeName(); ?>/js/validation.js"></script>
+
